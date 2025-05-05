@@ -1,5 +1,6 @@
 package com.example.car_management_service.configuration;
 
+
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,7 +24,7 @@ public class CloudinaryConfig {
             "cloud_name", cloudName,
             "api_key", apiKey,
             "api_secret", apiSecret,
-            "secure", false  // ⚠️ Disables SSL verification
+            "secure", true
     ));
 }
 

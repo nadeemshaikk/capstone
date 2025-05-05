@@ -19,7 +19,7 @@ import com.project.BuyRequestService.Entity.RequestEntity;
 import com.project.BuyRequestService.service.RequestService;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/buy")
 public class RequestController {
 	
 	@Autowired

@@ -21,7 +21,7 @@ import com.project.ServiceAppointmentService.service.ServiceAppointementService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/serviceAppointment")
 public class ServiceAppointmentController {
 
     @Autowired
