@@ -1,0 +1,167 @@
+.profile-container {
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210619/pngtree-colorful-watercolor-splash-company-profile-image_730901.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 2rem;
+  width: 256%;
+  
+}
+
+
+.header-row {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.home-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: none;
+  position: absolute;
+  left: 20px;
+}
+
+.home-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-title {
+  flex: 1;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto 3rem;
+  background-color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 150%;
+  max-width: 600px;
+  border: 2px solid #d4a373;
+}
+
+
+.profile-image-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #d4a373;
+  padding: 5px;
+  margin-bottom: 1rem;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.my-cars-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.my-cars-section h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.no-cars-message {
+  text-align: center;
+  padding: 2rem;
+}
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.car-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.car-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.car-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.car-details {
+  padding: 1.5rem;
+}
+
+.car-details h4 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.car-details p {
+  margin: 0.3rem 0;
+  color: #666;
+}
+
+.add-car-button,
+.add-another-car-button {
+  background-color: #d4a373;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-car-button:hover,
+.add-another-car-button:hover {
+  background-color: #c49262;
+}
+
+.add-another-car-button {
+  display: block;
+  margin: 2rem auto;
+} 
