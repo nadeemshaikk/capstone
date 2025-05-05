@@ -1,0 +1,8 @@
+com\project\AuthenticationMicroservice\AuthenticationMicroserviceApplication.class
+com\project\AuthenticationMicroservice\model\UserResponse.class
+com\project\AuthenticationMicroservice\model\UserResponse$Role.class
+com\project\AuthenticationMicroservice\security\JwtAuthenticationFilter.class
+com\project\AuthenticationMicroservice\controller\AuthController.class
+com\project\AuthenticationMicroservice\security\SecurityConfig.class
+com\project\AuthenticationMicroservice\feign\UserFeignClient.class
+com\project\AuthenticationMicroservice\security\JwtUtils.class

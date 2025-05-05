@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.2</version>
+		<version>3.2.10</version> <!-- Updated to the latest Spring Boot version -->
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -19,7 +19,8 @@
 	<description>User management microservice using Spring Boot</description>
 
 	<properties>
-		<java.version>21</java.version>
+		<java.version>21</java.version> <!-- Latest Java version compatible with Spring Boot 3.x -->
+		<spring-cloud.version>2023.0.1</spring-cloud.version> <!-- Updated to the latest Spring Cloud version -->
 	</properties>
 
 	<dependencies>
@@ -48,6 +49,12 @@
 		</dependency>
 
 		<!-- H2 Database -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>2.3.232</version> <!-- Updated to the latest H2 database version -->
+			<scope>runtime</scope>
+		</dependency>
 
 		<!-- Testing -->
 		<dependency>
@@ -55,7 +62,25 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Spring Cloud Netflix Eureka Client -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
 	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>

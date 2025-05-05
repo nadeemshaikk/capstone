@@ -1,0 +1,72 @@
+debug: true
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      #      default-filters:
+      #        - RewritePath=([^/])$, $1/ #Rewrite /
+      mvc:
+        routes:
+          - id: authentication-service
+            uri: lb://authentication-service
+            predicates:
+              - Path=/api/auth/**
+            filters:
+             - RewritePath=/api/auth/(?<segment>.*), /auth/$\{segment}
+
+          - id: buy-request-service
+            uri: lb://BuyRequestService
+            predicates:
+              - Path=/api/buy/**
+            filters:
+              - RewritePath=/api/buy/(?<segment>.*), /buy/$\{segment}
+
+          - id: car-management-service
+            uri: lb://car-management-service
+            predicates:
+              - Path=/cars/**
+            filters:
+              - RewritePath=/api/cars/(?<segment>.*), /cars/$\{segment}
+
+          - id: car-report-service
+            uri: lb://CarReportService
+            predicates:
+                - Path=/api/carReports/**
+            filters:
+              - RewritePath=/api/carsReports/(?<segment>.*), /carReports/$\{segment}
+
+          - id: service-appointment-service
+            uri: lb://ServiceAppointmentService
+            predicates:
+                - Path:/api/serviceAppointment/**
+            filters:
+              - RewritePath=/api/serviceAppointment/(?<segment>.*), /serviceAppointment/$\{segment}
+
+          - id: service-management-service
+            uri: lb://service
+            predicates:
+                - Path=/api/serviceManagement/**
+            filters:
+              - RewritePath=/api/serviceManagement/(?<segment>.*), /serviceManagement/$\{segment}
+
+          - id: transaction-management-service
+            uri: lb://TransactionManagementService
+            predicates:
+                - Path:/api/transactions/**
+            filters:
+              - RewritePath=/api/transactions/(?<segment>.*), /transactions/$\{segment}
+              -
+          - id: user-management-service
+            uri: lb://UserManagementService
+            predicates:
+                - Path:/api/users/**
+                - Path:/api//api/service-providers/**
+
+
+server:
+  port: 8080
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${DISCOVERY_SERVER:localhost}:8761/eureka

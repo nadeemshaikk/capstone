@@ -19,7 +19,7 @@ import com.project.service.entity.ServiceEntity;
 import com.project.service.service.ServiceService;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/serviceManagement")
 public class ServiceController {
 	
 	@Autowired

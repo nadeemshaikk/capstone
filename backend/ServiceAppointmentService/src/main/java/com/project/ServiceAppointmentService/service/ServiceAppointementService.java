@@ -36,7 +36,7 @@ public class ServiceAppointementService {
         appointment.setEngineCondition(dto.getEngineCondition());
         appointment.setBreakCondition(dto.getBrakeCondition());
         appointment.setTireCondition(dto.getTireCondition());
-        appointment.setOverAllCondition(dto.getOverallCondition());
+        appointment.setOverallCondition(dto.getOverallCondition());
         return repository.save(appointment);
     }
 
@@ -47,7 +47,7 @@ public class ServiceAppointementService {
         appointment.setEngineCondition(dto.getEngineCondition());
         appointment.setBreakCondition(dto.getBrakeCondition());
         appointment.setTireCondition(dto.getTireCondition());
-        appointment.setOverAllCondition(dto.getOverallCondition());
+        appointment.setOverallCondition(dto.getOverallCondition());
         return repository.save(appointment);
     }
 

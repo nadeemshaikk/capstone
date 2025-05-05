@@ -1,16 +1,9 @@
 package com.project.ServiceAppointmentService.dto;
 
-
-
 import java.util.Date;
-
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
 public class ServiceAppointmentDTO {
 
@@ -37,5 +30,3 @@ public class ServiceAppointmentDTO {
     private String tireCondition;
     private String overallCondition;
 }
-
-
