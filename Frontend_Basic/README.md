@@ -1,3 +1,36 @@
+📁 Frontend_Basic - Capstone Project UI (Version 1)
+This folder contains the first version of the frontend for the Capstone project. It includes basic static pages for:
+
+🏠 Home Page
+
+🛒 Buy Page
+
+💼 Selling Page
+
+🔐 Login/Register Page
+
+🛠️ Current Status
+This is the initial static version of the frontend.
+
+Pages are built with basic structure and layout.
+
+No dynamic data or backend connectivity is implemented yet.
+
+🔄 Next Steps
+Convert static content to dynamic rendering (using React states/props or external data sources).
+
+Modify hardcoded content with real data.
+
+Set up proper form validations and UI interactions.
+
+Create necessary API endpoints in the backend.
+
+Connect frontend to backend services (via REST APIs).
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
