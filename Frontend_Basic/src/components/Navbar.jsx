@@ -20,6 +20,7 @@ const Navbar = () => {
             <Link to="/buy" className="text-gray-600 hover:text-blue-600 transition">Buy</Link>
             <Link to="/sell" className="text-gray-600 hover:text-blue-600 transition">Sell</Link>
             <Link to="/services" className="text-gray-600 hover:text-blue-600 transition">Services</Link>
+            <Link to="/dashboard" className="text-gray-600 hover:text-blue-600 transition">Dashboard</Link>
             <div className="flex items-center space-x-4">
               <Link 
                 to="/login" 
@@ -54,6 +55,7 @@ const Navbar = () => {
               <Link to="/buy" className="text-gray-600 hover:text-blue-600 transition">Buy</Link>
               <Link to="/sell" className="text-gray-600 hover:text-blue-600 transition">Sell</Link>
               <Link to="/services" className="text-gray-600 hover:text-blue-600 transition">Services</Link>
+              <Link to="/dashboard" className="text-gray-600 hover:text-blue-600 transition">Dashboard</Link>
               <Link to="/login" className="text-gray-600 hover:text-blue-600 transition">Login</Link>
               <Link to="/register" className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition text-center">
                 Register
