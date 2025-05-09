@@ -26,6 +26,7 @@ public class AuthController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+
     @PostMapping("/login")
     public Map<String, Object> login(@RequestBody Map<String, String> request) {
         String email = request.get("email");

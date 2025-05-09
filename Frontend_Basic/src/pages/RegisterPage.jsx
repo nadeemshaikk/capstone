@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -10,11 +11,26 @@ const RegisterPage = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Implement registration logic
-    console.log('Register:', { name, email, password });
-    navigate('/login');
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+
+    try {
+      await axios.post('http://localhost:2025/auth/register', {
+        userName: name,
+        email,
+        password
+      });
+      alert('Registration successful. Please log in.');
+      navigate('/login');
+    } catch (error) {
+      console.error('Registration error:', error.response?.data || error.message);
+      alert('Registration failed');
+    }
   };
 
   return (
