@@ -17,10 +17,11 @@ import DashboardPage from './pages/DashboardPage';
 import HomePage from './pages/HomePage';
 
 
+
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />  {/* ✅ Only one default route */}
+      <Route path="/" element={<HomePage />} />  
       <Route path="/dashboard" element={<DashboardPage />} />
       <Route path="/buy" element={<BuyPage />} />
       <Route path="/sell" element={<SellPage />} />
