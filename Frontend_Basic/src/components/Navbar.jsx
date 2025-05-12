@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { Menu, X, Car } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Menu, X, Car } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
@@ -21,13 +21,10 @@ const Navbar = () => {
             <Link to="/sell" className="text-gray-600 hover:text-blue-600 transition">Sell</Link>
             <Link to="/services" className="text-gray-600 hover:text-blue-600 transition">Services</Link>
             <Link to="/dashboard" className="text-gray-600 hover:text-blue-600 transition">Dashboard</Link>
+            <Link to="/contact" className="text-gray-600 hover:text-blue-600 transition">Contact</Link>
+            <Link to="/about" className="text-gray-600 hover:text-blue-600 transition">About Us</Link> {/* New About Us Link */}
             <div className="flex items-center space-x-4">
-              <Link 
-                to="/login" 
-                className="text-gray-600 hover:text-blue-600 transition"
-              >
-                Login
-              </Link>
+              <Link to="/login" className="text-gray-600 hover:text-blue-600 transition">Login</Link>
               <Link 
                 to="/register" 
                 className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
@@ -56,8 +53,13 @@ const Navbar = () => {
               <Link to="/sell" className="text-gray-600 hover:text-blue-600 transition">Sell</Link>
               <Link to="/services" className="text-gray-600 hover:text-blue-600 transition">Services</Link>
               <Link to="/dashboard" className="text-gray-600 hover:text-blue-600 transition">Dashboard</Link>
+              <Link to="/contact" className="text-gray-600 hover:text-blue-600 transition">Contact</Link>
+              <Link to="/about" className="text-gray-600 hover:text-blue-600 transition">About Us</Link> {/* New About Us Link */}
               <Link to="/login" className="text-gray-600 hover:text-blue-600 transition">Login</Link>
-              <Link to="/register" className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition text-center">
+              <Link 
+                to="/register" 
+                className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition text-center"
+              >
                 Register
               </Link>
             </div>
@@ -65,7 +67,7 @@ const Navbar = () => {
         )}
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

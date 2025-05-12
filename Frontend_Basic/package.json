@@ -16,8 +16,7 @@
     "lucide-react": "^0.309.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^6.21.1",
-    "yup": "^1.6.1"
+    "react-router-dom": "^6.21.1"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.4.1",

@@ -115,8 +115,7 @@
 
 // export default BuyPage;import React, { useState } from 'react';  
 import React, { useState } from 'react';  
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+
 import { Link } from 'react-router-dom';
 
 const BuyPage = () => {
@@ -172,7 +171,6 @@ const BuyPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
 
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold mb-8">Find Your Perfect Car</h1>
@@ -245,7 +243,6 @@ const BuyPage = () => {
         </div>
       </div>
 
-      <Footer />
     </div>
   );
 };

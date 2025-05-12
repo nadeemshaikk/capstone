@@ -1,13 +1,13 @@
 import { Car, ShieldCheck, Star, Truck } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 import CarComparison from '../components/CarComparison';
 import UserReviews from '../components/UserReviews';
 
 function HomePage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
       
       {/* Hero Section */}
       <div className="relative h-[600px] flex items-center justify-center">
@@ -65,6 +65,7 @@ function HomePage() {
         </div>
       </div>
 
+
       {/* Car Comparison Section */}
       <CarComparison />
 
@@ -85,7 +86,6 @@ function HomePage() {
         </div>
       </div>
 
-      <Footer />
     </div>
   );
 }

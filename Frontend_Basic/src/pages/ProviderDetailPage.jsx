@@ -1,8 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useFormik } from 'formik';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+
 
 const ProviderDetailPage = () => {
   const { providerId } = useParams();
@@ -36,7 +35,6 @@ const ProviderDetailPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
       <div className="container mx-auto px-4 py-10">
         <h1 className="text-3xl font-bold mb-4">{provider.name}</h1>
         <p className="text-gray-600 mb-2">📍 {provider.address}</p>
@@ -107,7 +105,6 @@ const ProviderDetailPage = () => {
           </button>
         </form>
       </div>
-      <Footer />
     </div>
   );
 };
