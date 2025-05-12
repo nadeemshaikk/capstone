@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.chatbot-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 50; /* Ensure it's above other content */
+}
+
+.chatbot-sidebar {
+  transition: transform 0.3s ease-in-out;
+  z-index: 50; /* Ensure it's above other content */
+}

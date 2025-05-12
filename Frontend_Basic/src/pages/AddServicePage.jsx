@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
+
 const AddServicePage = () => {
   const formik = useFormik({
     initialValues: {
@@ -19,76 +20,18 @@ const AddServicePage = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200">
-      <Navbar />
-      <div className="max-w-2xl mx-auto my-10 p-8 bg-white rounded-2xl shadow-xl">
-        <h2 className="text-3xl font-serif font-bold text-gray-800 mb-6 text-center">Add Your Service</h2>
-        <form onSubmit={formik.handleSubmit} className="space-y-5">
-          <div>
-            <label className="block mb-1 font-medium text-gray-700">Service Center Name</label>
-            <input
-              name="name"
-              placeholder="Enter name"
-              onChange={formik.handleChange}
-              value={formik.values.name}
-              className="w-full p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 transition"
-            />
-          </div>
-
-          <div>
-            <label className="block mb-1 font-medium text-gray-700">Address</label>
-            <input
-              name="address"
-              placeholder="Enter address"
-              onChange={formik.handleChange}
-              value={formik.values.address}
-              className="w-full p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 transition"
-            />
-          </div>
-
-          <div>
-            <label className="block mb-1 font-medium text-gray-700">Services Offered</label>
-            <textarea
-              name="services"
-              placeholder="E.g., Oil Change, Tire Replacement"
-              onChange={formik.handleChange}
-              value={formik.values.services}
-              className="w-full p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 transition"
-              rows={3}
-            />
-          </div>
-
-          <div>
-            <label className="block mb-1 font-medium text-gray-700">Starting Price</label>
-            <input
-              name="price"
-              placeholder="Enter price"
-              onChange={formik.handleChange}
-              value={formik.values.price}
-              className="w-full p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 transition"
-            />
-          </div>
-
-          <div>
-            <label className="block mb-1 font-medium text-gray-700">Availability</label>
-            <input
-              name="availability"
-              placeholder="E.g., Mon-Fri 9am-6pm"
-              onChange={formik.handleChange}
-              value={formik.values.availability}
-              className="w-full p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 transition"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="w-full bg-green-600 text-white py-3 rounded-lg shadow hover:bg-green-700 hover:shadow-lg transition-all font-semibold"
-          >
-            Submit Service
-          </button>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-2xl mx-auto py-10 px-4 bg-white shadow-md rounded-md">
+        <h2 className="text-3xl font-bold mb-6">Add Your Service</h2>
+        <form onSubmit={formik.handleSubmit} className="space-y-4">
+          <input name="name" placeholder="Service Center Name" onChange={formik.handleChange} value={formik.values.name} className="w-full p-2 border rounded" />
+          <input name="address" placeholder="Address" onChange={formik.handleChange} value={formik.values.address} className="w-full p-2 border rounded" />
+          <textarea name="services" placeholder="Services Offered (comma separated)" onChange={formik.handleChange} value={formik.values.services} className="w-full p-2 border rounded" />
+          <input name="price" placeholder="Starting Price" onChange={formik.handleChange} value={formik.values.price} className="w-full p-2 border rounded" />
+          <input name="availability" placeholder="Availability (e.g., Mon-Fri 9am-6pm)" onChange={formik.handleChange} value={formik.values.availability} className="w-full p-2 border rounded" />
+          <button type="submit" className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Submit</button>
         </form>
       </div>
-      <Footer />
     </div>
   );
 };
